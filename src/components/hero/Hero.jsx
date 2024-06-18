@@ -22,12 +22,12 @@ function Hero() {
   return (
     <>
       <div className="wrapper">
-        <div className="container">
+        <div className="container HeroContainer">
           <div className="row  px-0 px-sm-2 px-lg-0">
-            <div className="col-lg-6 order-2 order-lg-1">
+            <div className="col-lg-6 order-2 order-lg-1 d-flex align-items-center">
               <HeroText />
             </div>
-            <div className="col-lg-6 order-1 order-lg-2">
+            <div className="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
               <HeroImage />
             </div>
           </div>
