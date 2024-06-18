@@ -1,6 +1,7 @@
 import "./app.scss";
-import Hero from "./components/hero/Hero";
-import Preloader from "./components/preloader/Preloader";
+import Hero from "./landingPage/sections/hero/Hero";
+import Preloader from "./landingPage/components/preloader/Preloader";
+import Skills from "./landingPage/sections/skills/Skills";
 function App() {
   return (
     <>
@@ -9,7 +10,9 @@ function App() {
       <section>
         <Hero />
       </section>
-      <section>skills</section>
+      <section>
+        <Skills />
+      </section>
       <section id="about">about</section>
       <section>portfolio</section>
       <section>contact</section>

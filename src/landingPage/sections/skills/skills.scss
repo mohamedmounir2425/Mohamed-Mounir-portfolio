@@ -1,0 +1,38 @@
+.skillsSection {
+  height: 100%;
+}
+.skillsRow {
+  gap: 80px;
+  .skillContainer {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skillsRow {
+    gap: 60px;
+    .skillContainer {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .skillsRow {
+    gap: 50px;
+    .skillContainer {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .skillsRow {
+    gap: 25px;
+    .skillContainer {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
