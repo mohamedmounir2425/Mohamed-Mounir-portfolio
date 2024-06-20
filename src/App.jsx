@@ -4,24 +4,32 @@ import Preloader from "./landingPage/components/preloader/Preloader";
 import Skills from "./landingPage/sections/skills/Skills";
 import About from "./landingPage/sections/about/About";
 import Portfolio from "./landingPage/sections/portfolio/Portfolio";
+import Contact from "./landingPage/sections/contact/Contact";
+import Sidebar from "./components/sidebar/Sidebar";
+import Footer from "./landingPage/components/footer/Footer";
 function App() {
   return (
     <>
       <Preloader theme={"dark"} />
 
-      <section>
+      <section id="Homepage">
+        <Sidebar />
         <Hero />
       </section>
-      <section>
+      <section id="Skills">
         <Skills />
       </section>
-      <section id="about">
+      <section id="About">
         <About />
       </section>
-      <div>
+      <div id="Portfolio">
         <Portfolio />
       </div>
-      <section>contact</section>
+      <div id="Contact">
+        <Contact />
+      </div>
+
+      <Footer />
     </>
   );
 }
