@@ -19,12 +19,16 @@ function About() {
               </p>
               <span>More about me...</span>
               <p>
-                I've started my journey with programming back in 2022 with C++
-                and Arduino for my studies for dealing with sumo robots and
-                sensors, then I started learning about programmable logic
-                controller with Ladder logic language. Later, I started learning
-                web development on my own by learning Javascript, then I decided
-                to be a Frontend web developer.
+                I've started my programming journey in 2022 after completing my
+                military service. I began by learning various programming
+                courses online. I then completed ITI's four-month scholarship in
+                Frontend and Cross-Platform Mobile Development. After the
+                scholarship, I worked as a part-time Frontend Developer at
+                PTSware from May to September 2023. I then joined ITI's
+                nine-month scholarship in Web & UI Development, where I learned
+                low-level programming languages and deepened my skills. Now, I
+                am confident in working on any web projects and applying my
+                skills to real-world projects.
               </p>
             </div>
           </div>
