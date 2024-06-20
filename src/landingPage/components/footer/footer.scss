@@ -1,0 +1,37 @@
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--box-color-light);
+  color: var(--text-color-gray);
+  font-size: 1.1rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  a:hover {
+    color: var(--color-brand--1);
+  }
+  .icons {
+    // background-color: #fff;
+    display: flex;
+  }
+  .icons svg {
+    // font-size: 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .icons svg:hover {
+    color: var(--color-brand--1);
+  }
+
+  .icons a:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}
