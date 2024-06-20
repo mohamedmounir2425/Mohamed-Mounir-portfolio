@@ -1,12 +1,41 @@
+import { useRef } from "react";
 import Tooltip from "../../../components/tooltip/Tooltip";
+import { motion } from "framer-motion";
 import "./skills.scss";
-
+import { useInView } from "framer-motion";
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.2,
+    },
+  },
+};
 function Skills() {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div className="container h-100 d-flex justify-content-center align-items-center py-5 ">
+    <motion.div
+      ref={ref}
+      variants={variants}
+      initial="initial"
+      animate={isInView && "animate"}
+      className="container h-100 d-flex justify-content-center align-items-center py-5 "
+    >
       <div className="rowsContainer d-flex flex-column gap-5 ">
         {/* row one */}
-        <div className="skillsRow d-flex justify-content-center">
+        <motion.div
+          className="skillsRow d-flex justify-content-center"
+          variants={variants}
+        >
           <Tooltip infoText="HTML">
             <div className="skillContainer">
               <img src="/images/skills/html.svg" className="w-100" alt="" />
@@ -45,9 +74,12 @@ function Skills() {
               <img src="/images/skills/node-js.svg" className="w-100" alt="" />
             </div>
           </Tooltip>
-        </div>
+        </motion.div>
         {/* row two */}
-        <div className="skillsRow d-flex justify-content-center">
+        <motion.div
+          className="skillsRow d-flex justify-content-center"
+          variants={variants}
+        >
           <Tooltip infoText="React">
             <div className="skillContainer">
               <img src="/images/skills/react.svg" className="w-100" alt="" />
@@ -73,9 +105,12 @@ function Skills() {
               <img src="/images/skills/vue.svg" className="w-100" alt="" />
             </div>
           </Tooltip>
-        </div>
+        </motion.div>
         {/* row three */}
-        <div className="skillsRow d-flex justify-content-center">
+        <motion.div
+          className="skillsRow d-flex justify-content-center"
+          variants={variants}
+        >
           <Tooltip infoText="Tailwind">
             <div className="skillContainer">
               <img
@@ -108,9 +143,12 @@ function Skills() {
               <img src="/images/skills/figma.svg" className="w-100" alt="" />
             </div>
           </Tooltip>
-        </div>
+        </motion.div>
         {/* row four */}
-        <div className="skillsRow d-flex justify-content-center">
+        <motion.div
+          className="skillsRow d-flex justify-content-center"
+          variants={variants}
+        >
           <Tooltip infoText="MongoDB">
             <div className="skillContainer">
               <img src="/images/skills/mongodb.svg" className="w-100" alt="" />
@@ -126,9 +164,9 @@ function Skills() {
               <img src="/images/skills/jest.svg" className="w-100" alt="" />
             </div>
           </Tooltip>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

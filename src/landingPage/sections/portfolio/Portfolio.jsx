@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import PortfolioCaption from "./PortfolioCaption";
-import WorkCard from "./WorkCard";
-import WorkFilters from "./WorkFilters";
-import "./portfolio.scss";
+import { motion, useInView } from "framer-motion";
 import mixitup from "mixitup";
+import "./portfolio.scss";
+
+import WorkCard from "./WorkCard";
+import PortfolioCaption from "./PortfolioCaption";
+import WorkFilters from "./WorkFilters";
 const works = [
   {
     imgSrc: "images/portfolio/projectsPic/roamify.png",
@@ -132,7 +134,17 @@ const works = [
     },
   },
 ];
-
+const variants = {
+  initial: {
+    scale: 0.8,
+  },
+  animate: {
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 function Portfolio() {
   const [filter, setFilter] = useState("");
   const [filteredWorks, setFilteredWorks] = useState(works);
@@ -163,11 +175,19 @@ function Portfolio() {
       window.mixer.dataset(filteredWorks);
     }
   }, [filteredWorks]);
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-10px" });
   return (
     <>
       <div className="portfolio my-5">
-        <div className="portfolio-brush-image">
-          <img src="/images/brushes/portfolio/1.png" alt="" />
+        <div ref={ref} className="portfolio-brush-image">
+          <motion.img
+            src="/images/brushes/portfolio/1.png"
+            alt=""
+            variants={variants}
+            initial="initial"
+            animate={isInView && "animate"}
+          />
         </div>
         <div className="container">
           <PortfolioCaption />
