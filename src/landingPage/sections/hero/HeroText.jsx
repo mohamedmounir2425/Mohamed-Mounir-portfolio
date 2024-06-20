@@ -9,7 +9,7 @@ function HeroText() {
       </h3>
       <p>
         Passionate learner want to connect with people across many industries,
-        I'm a Frontend Web Developer with a degree in Electrical Engineering
+        I'm a Frontend Web Developer with a degree in Business
       </p>
       <div className="buttonAndIcons">
         <button>

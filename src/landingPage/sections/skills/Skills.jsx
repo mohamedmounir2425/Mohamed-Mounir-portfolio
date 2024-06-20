@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Tooltip from "../../../components/tooltip/Tooltip";
 import { motion } from "framer-motion";
 import "./skills.scss";
-import { useInView } from "framer-motion";
+
 const variants = {
   initial: {
     x: -500,
@@ -21,13 +21,13 @@ const variants = {
 };
 function Skills() {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <motion.div
       ref={ref}
       variants={variants}
       initial="initial"
-      animate={isInView && "animate"}
+      animate={"animate"}
       className="container h-100 d-flex justify-content-center align-items-center py-5 "
     >
       <div className="rowsContainer d-flex flex-column gap-5 ">
