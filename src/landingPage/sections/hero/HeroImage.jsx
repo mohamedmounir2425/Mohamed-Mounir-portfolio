@@ -83,7 +83,7 @@ function HeroImage() {
   return (
     <div className="imageContainer ms-auto d-flex  justify-content-center justify-content-lg-end p-lg-4 p-xl-0 ">
       <div className="image">
-        <img src="/images/hero/me.jpg" alt="" />
+        <img src="/images/hero/me.PNG" alt="" />
         {icons.map((icon) => {
           return (
             <motion.span
