@@ -13,7 +13,7 @@ function HeroText() {
       </p>
       <div className="buttonAndIcons">
         <button>
-          <a href="#about">
+          <a href="#About">
             <span>About Me</span>
           </a>
         </button>
